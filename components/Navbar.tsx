@@ -10,6 +10,12 @@ import Sidebar from "./Sidebar";
 
 const Navbar = () => {
 
+  const [isOut, setIsOut] = useState(false);
+
+  const setIsVis = () => {
+    setIsOut(state => !state);
+  }
+
   return (
     <div className="fixed w-full shadow-xl z-50">
       <div className="flex justify-between items-center w-full h-full px-5 md:px-10 xl:px-12">
@@ -38,10 +44,16 @@ const Navbar = () => {
         {/* <div className="md:hidden px-3 m-2">
           <HiOutlineMenuAlt1 size={30} />
         </div> */}
-        <CustomButton />
+        <CustomButton
+          isOut = {isOut}
+          setIsOut = {setIsVis}
+        />
       </div>
       
-      <Sidebar />
+      <Sidebar
+        isOut = {isOut}
+        setIsOut = {setIsVis}
+      />
 
     </div>
   );

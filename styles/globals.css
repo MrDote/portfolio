@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-bg-color: #a2dff8;
+  --primary-text-color: #1d3145;
+}
+
 @layer base {
   body {
-    @apply bg-[#a2dff8]  text-[#1d3145]
+    @apply bg-[var(--primary-bg-color)]  text-[var(--primary-text-color)]
   }
 
   h1, h2, h3, h4, h5, h6 {
