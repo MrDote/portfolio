@@ -3,34 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --primary-bg-color: #a2dff8;
-  --primary-text-color: #1d3145;
+    --primary-bg-color: #a2dff8;
+    --primary-text-color: #1d3145;
 }
 
 @layer base {
-  body {
-    @apply bg-[var(--primary-bg-color)]  text-[var(--primary-text-color)]
-  }
+    body {
+        @apply bg-[var(--primary-bg-color)]  text-[var(--primary-text-color)]
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold
-  }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold
+    }
 
-  h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-  }
+    h1 {
+        @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+    }
 
-  h2 {
-    @apply text-3xl sm:text-4xl md:text-5xl
-  }
+    h2 {
+        @apply text-3xl sm:text-4xl
+    }
 
-  li {
-    @apply cursor-pointer
-  }
+    li {
+        @apply cursor-pointer
+    }
 
-  button {
-    @apply shadow-xl shadow-[#26394D] rounded-xl uppercase bg-gradient-to-r from-indigo-600 to-sky-500
-    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
-    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
-  }
+    button {
+        @apply shadow-xl shadow-[#26394D] rounded-xl uppercase bg-gradient-to-r from-indigo-600 to-sky-500
+        /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+        /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    }
 }
+
+/* @layer utilities {
+    @variants responsive{
+        .text-shadow {
+            text-shadow: 0 0 5px rgb(14,165,233),
+                         0 0 25px rgb(14,165,233),
+                         0 0 50px rgb(14,165,233),
+                         0 0 100px rgb(14,165,233);
+        }
+    }
+} */
