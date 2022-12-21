@@ -1,11 +1,9 @@
-import React from "react";
-
 const CustomButton = ({isOut, setIsOut}: {isOut: boolean, setIsOut: () => void}) => {
 
     return (
         <div 
         onClick={() => setIsOut()}
-        className={`md:hidden relative flex justify-center items-center cursor-pointer transition-all duration-500 ease-in-out w-20 h-20 box-border z-20`}>
+        className={`md:hidden relative flex justify-center items-center cursor-pointer transition-all duration-500 ease-in-out w-20 h-20 box-border mx-4 my-2`}>
             <div 
             className={`w-12 h-2 bg-slate-50 rounded-md shadow shadow-zinc-800 transition-all duration-500 ease-in-out
             before:absolute before:w-12 before:h-2 before:bg-slate-50 before:rounded-md before:shadow before:shadow-zinc-800 before:transition-all before:duration-500 before:ease-in-out before:translate-y-[-1rem]
