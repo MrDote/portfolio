@@ -13,7 +13,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="fixed w-full shadow-xl z-50">
+        <div className="fixed w-full shadow-xl z-40">
             <div className={`flex justify-end w-full h-full px-5 md:px-10 xl:px-12 duration-500
             ${isOut ? `` : `backdrop-blur`}
             `}>
