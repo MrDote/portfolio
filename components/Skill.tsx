@@ -1,7 +1,9 @@
-const Skill = ({ obj }: {obj: [string, number]}) => {
+import { FC } from "react"
+import { SkillProps } from "./Skills";
 
-    const [name, score] = obj
-    const width = 10 * score;
+const Skill: FC<SkillProps> = ({ skill }) => {
+
+    const width = 10 * skill.score;
 
     //* EG:
     //* define an object mapping the 'sizes' to the class strings
@@ -24,10 +26,10 @@ const Skill = ({ obj }: {obj: [string, number]}) => {
     //! build sorter -> slow at start & end, fast mid 
     return (
         <div className="w-full relative flex text-lg font-bold h-9">
-            <div style={{width:`${width}%`}} className="absolute h-full bg-sky-600 flex items-center pl-4 rounded-l-lg z-10 select-none">
-                <p>{name}</p>
+            <div style={{width:`${width}%`}} className="absolute h-full bg-sky-600 flex items-center pl-4 rounded-l-lg select-none">
+                <p>{skill.name}</p>
             </div>
-            <div className="bg-sky-400 w-full h-full rounded-lg"></div>
+            <div className="bg-sky-400 w-full h-full rounded-lg shadow-md"></div>
         </div>
     )
 }

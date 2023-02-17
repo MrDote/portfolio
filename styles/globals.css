@@ -4,7 +4,12 @@
 
 :root {
     --primary-bg-color: #a2dff8;
+    --secondary-bg-color: rgb(252 211 77);
     --primary-text-color: #1d3145;
+    --form-color-red: #AE1100;
+    --form-color-bg: #EBECF0;
+    --form-color-shaddow: #BABECC;
+    --form-color-white: #FFF;
 }
 
 @layer base {
@@ -17,7 +22,7 @@
     }
 
     h1 {
-        @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+        @apply text-4xl sm:text-5xl md:text-5xl lg:text-6xl
     }
 
     h2 {
@@ -27,21 +32,90 @@
     li {
         @apply cursor-pointer
     }
+}
 
-    button {
-        @apply shadow-xl shadow-[#26394D] rounded-xl uppercase bg-gradient-to-r from-indigo-600 to-sky-500
-        /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
-        /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+@layer components {
+    .segment {
+        text-shadow: 1px 1px 1px var(--form-color-white);
+    }
+    .button .input {
+        border: 0;
+        outline: 0;
+        font-size: 1rem;
+        padding: 1rem;
+        background-color: var(--form-color-bg);
+        text-shadow: 1px 1px 0 var(--form-color-white);
+    }
+    .button {
+        color:#61677C;
+        font-weight: bold;
+        box-shadow: -5px -5px 20px var(--form-color-white),  5px 5px 20px var(--form-color-shaddow);
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .button-hover {
+        box-shadow: -2px -2px 5px var(--form-color-white), 2px 2px 5px var(--form-color-shaddow);
+    }
+    .button-active {
+        box-shadow: inset 1px 1px 2px var(--form-color-shaddow), inset -1px -1px 2px var(--form-color-white);
+    }
+    .input {
+        margin-right: 0.5rem;
+        box-shadow: inset 2px 2px 5px var(--form-color-shaddow), inset -5px -5px 10px var(--form-color-white);
+        width: 100%;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+        appearance: none;
+    }
+    .input-focus {
+        outline: none;
+        box-shadow: inset 1px 1px 2px var(--form-color-shaddow), inset -1px -1px 2px var(--form-color-white);
     }
 }
 
-/* @layer utilities {
-    @variants responsive{
-        .text-shadow {
-            text-shadow: 0 0 5px rgb(14,165,233),
-                         0 0 25px rgb(14,165,233),
-                         0 0 50px rgb(14,165,233),
-                         0 0 100px rgb(14,165,233);
-        }
+/* font-family: "Raleway";
+-webkit-font-smoothing: antialiased;
+color: inherit;
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: #262f38;
+cursor: pointer;
+font-size: 18pt;
+height: 55px;
+margin: 0 15px;
+overflow: hidden;
+position: relative;
+text-align: center;
+transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+width: 55px;
+
+cursor: pointer;
+display: inline-block;
+font: normal normal normal 24px/1 "Material Design Icons";
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+transform: translate(0, 0);
+color: #fff;
+text-align: center;
+font-size: 20pt; */
+
+@layer utilities {
+    ::-webkit-scrollbar {
+        width: 0.9rem;
     }
-} */
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        /* width: 1rem; */
+        background: rgb(255 255 255 / 30%);
+    }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #00c3ffdf, #81add6);
+        border-radius: 15px;
+    }
+}

@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import About from '../components/About';
 import Skills from '../components/Skills';
-import Parallax from '../components/Parallax';
-// import Fireworks from '../components/Fireworks';
+import Projects from '../components/Projects';
+import Arrow from '../components/Arrow';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function Main() {
     return (
@@ -12,12 +14,13 @@ export default function Main() {
                 <title>Anton Portfolio</title>
                 <meta name="description" content="change" />
             </Head>
-            {/* <canvas className='absolute border-white bg-[color:var(--primary-bg-color)] border-4 w-full h-full' id='canvas'></canvas> */}
-            {/* <Fireworks /> */}
             <Navbar />
             <About />
             <Skills />
-            <Parallax />
+            <Projects />
+            <Arrow />
+            <Contact />
+            <Footer />
         </>
     )
 }
