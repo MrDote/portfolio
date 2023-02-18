@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --primary-bg-color: #a2dff8;
-    --secondary-bg-color: rgb(252 211 77);
+    --primary-bg-color: #EBECF0;
+    --secondary-bg-color: rgb(209, 214, 222);
     --primary-text-color: #1d3145;
+    --primary-border-color: rgb(244 244 245);
     --form-color-red: #AE1100;
     --form-color-bg: #EBECF0;
     --form-color-shaddow: #BABECC;
@@ -72,6 +73,10 @@
         outline: none;
         box-shadow: inset 1px 1px 2px var(--form-color-shaddow), inset -1px -1px 2px var(--form-color-white);
     }
+
+    .skill {
+        box-shadow: -5px -5px 20px var(--form-color-white),  5px 5px 20px var(--form-color-shaddow);
+    }
 }
 
 /* font-family: "Raleway";
@@ -110,12 +115,13 @@ font-size: 20pt; */
       /* Track */
       ::-webkit-scrollbar-track {
         /* width: 1rem; */
-        background: rgb(255 255 255 / 30%);
+        background: rgb(255 255 255 / 60%);
+        border-radius: 15px;
     }
       
       /* Handle */
       ::-webkit-scrollbar-thumb {
-        background: linear-gradient(45deg, #00c3ffdf, #81add6);
+        background: var(--form-color-shaddow);
         border-radius: 15px;
     }
 }

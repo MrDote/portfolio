@@ -19,6 +19,7 @@ module.exports = {
                 'type-5': 'typefive 2s steps(6) infinite',
                 'type-4': 'typefour 2s steps(5) infinite',
                 'type-7': 'typeseven 2s steps(8) infinite',
+                'slideleft': 'slideDownTop 2s ease-out 0s 1',
             },
             keyframes: {
                 move: {
@@ -40,6 +41,11 @@ module.exports = {
                 typeseven: {
                     '0%': { transform : 'translateX(0)' },
                     '100%': { transform : 'translateX(10rem)' },
+                },
+                slideDownTop: {
+                    '0%': { transform : 'translateY(0)' },
+                    '33%': { transform : 'translateY(100%)' },
+                    '66%': { transform : 'translateY(-100%)' },
                 },
             }
         },

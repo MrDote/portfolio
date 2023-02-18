@@ -9,7 +9,7 @@ const CustomTextRoller = () => {
                 sm:before:h-[7.5em]
                 sm:after:h-[5.0em]
             ">
-                <h2 className='relative animate-move'>Hello, I'm <span className="text-amber-500">Anton</span></h2>
+                <h2 className='relative animate-move'>Hello, I'm <span className="text-[var()]">Anton</span></h2>
                 <h2 className='relative animate-move'>A Front-End Developer</h2>
                 <h2 className='relative animate-move'>Welcome!</h2>
             </div>

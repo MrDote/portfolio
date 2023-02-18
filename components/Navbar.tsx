@@ -3,7 +3,6 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import CustomButton from "./CustomButton";
 import Sidebar from "./Sidebar";
 import paths from '../paths';
-import { type } from "os";
 
 // isOut = {isOut}
 // setIsOut = {handleNav}
@@ -36,7 +35,6 @@ const Navbar = () => {
         isOut: isOut,
         setIsOut: setIsOut,
     }
-    
 
     // //* custom hook to track window width
     // function useWindowSize() {

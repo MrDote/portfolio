@@ -4,7 +4,7 @@ import paths from '../paths';
 
 function ReturnButton() {
     return (
-        <div className="mx-auto flex justify-center -mt-7">
+        <div className="mx-auto flex justify-center">
             <Link href={paths.about}>
                 <HiChevronDoubleUp size='55' className='bg-red-400 text-white p-2' />
             </Link>
