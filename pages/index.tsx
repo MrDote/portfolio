@@ -14,11 +14,13 @@ export default function Main() {
                 <meta name="description" content="change" />
             </Head>
             <Navbar />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
-            <Footer />
+            <div id='main-wrapper' className='relative h-screen overflow-y-auto overflow-x-hidden'>
+                <About />
+                <Skills />
+                <Projects />
+                <Contact />
+                <Footer />
+            </div>
         </>
     )
 }

@@ -14,6 +14,7 @@
 }
 
 @layer base {
+    
     body {
         @apply bg-[var(--primary-bg-color)]  text-[var(--primary-text-color)]
     }
@@ -36,9 +37,11 @@
 }
 
 @layer components {
+
     .segment {
         text-shadow: 1px 1px 1px var(--form-color-white);
     }
+
     .button .input {
         border: 0;
         outline: 0;
@@ -47,6 +50,7 @@
         background-color: var(--form-color-bg);
         text-shadow: 1px 1px 0 var(--form-color-white);
     }
+
     .button {
         color:#61677C;
         font-weight: bold;
@@ -55,12 +59,15 @@
         cursor: pointer;
         font-weight: 600;
     }
+
     .button-hover {
         box-shadow: -2px -2px 5px var(--form-color-white), 2px 2px 5px var(--form-color-shaddow);
     }
+
     .button-active {
         box-shadow: inset 1px 1px 2px var(--form-color-shaddow), inset -1px -1px 2px var(--form-color-white);
     }
+
     .input {
         margin-right: 0.5rem;
         box-shadow: inset 2px 2px 5px var(--form-color-shaddow), inset -5px -5px 10px var(--form-color-white);
@@ -69,21 +76,49 @@
         transition: all 0.2s ease-in-out;
         appearance: none;
     }
+
     .input-focus {
         outline: none;
         box-shadow: inset 1px 1px 2px var(--form-color-shaddow), inset -1px -1px 2px var(--form-color-white);
     }
 
     .skill {
-        box-shadow: -5px -5px 20px var(--form-color-white),  5px 5px 20px var(--form-color-shaddow);
+        box-shadow: -5px -5px 20px var(--form-color-white), 5px 5px 20px var(--form-color-shaddow);
     }
 
     #skillcontainer:hover > #image {
         transform: scale(1.2);
         opacity: 0;
     }
+
     #skillcontainer:hover > #info {
         opacity: 1;
+    }
+
+    .background, .foreground {
+        z-index: -1;
+    }
+
+    .background {
+        transform: translateZ(-15px) scale(2.5);
+    }
+
+    .foreground {
+        transform: translateZ(-10px) scale(2);
+    }
+
+    .foreground-closer {
+        transform: translateZ(-5px) scale(1.5);
+    }
+
+    #main-wrapper {
+        perspective: 10px;
+        perspective-origin: center;
+    }
+
+    .parallax-wrapper {
+        transform-style: preserve-3d;
+        z-index: -1;
     }
 }
 
@@ -92,15 +127,14 @@
         width: 0.9rem;
     }
       
-      /* Track */
-      ::-webkit-scrollbar-track {
-        /* width: 1rem; */
+    /* Track */
+    ::-webkit-scrollbar-track {
         background: rgb(255 255 255 / 60%);
         border-radius: 15px;
     }
       
-      /* Handle */
-      ::-webkit-scrollbar-thumb {
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
         background: var(--form-color-shaddow);
         border-radius: 15px;
     }

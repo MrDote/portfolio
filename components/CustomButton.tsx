@@ -1,16 +1,16 @@
 import { propsType } from './Navbar';
-import { useEffect } from 'react';
 
 const CustomButton = ({isOut, setIsOut}: propsType) => {
 
-    useEffect(() => {
-        if (isOut) {
-            const x = window.scrollX;
-            const y = window.scrollY;
-            window.onscroll = () => window.scrollTo(x, y);
-        }
-        else window.onscroll = () => {};
-    }, [isOut]);
+    //* Disable page scrolling when sidebar is open (instead resolved by adding outside wrapper element)
+    // useEffect(() => {
+    //     if (isOut) {
+    //         const x = window.scrollX;
+    //         const y = window.scrollY;
+    //         window.onscroll = () => window.scrollTo(x, y);
+    //     }
+    //     else window.onscroll = () => {};
+    // }, [isOut]);
 
     return (
         <div 

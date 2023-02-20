@@ -6,6 +6,8 @@ module.exports = {
         "./pages/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
+    mode: 'jit',
+    // media: false,
     theme: {
         extend: {
 
@@ -51,6 +53,5 @@ module.exports = {
         },
     },
     plugins: [
-        require('tailwind-scrollbar'),
     ],
 }

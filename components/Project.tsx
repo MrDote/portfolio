@@ -12,9 +12,10 @@ const Project: FC<ProjectProps> = ({ project }) => {
         router.push(project.url)
     }
 
-    const MyImage = () => {
-        return (
-            <div id="skillcontainer" className="w-full h-full relative aspect-[5/3] border-red-600 border-2 text-center rounded-lg overflow-hidden cursor-pointer"
+    const status = project.complete ? 'Complete! Check it out!' : 'In Progress...';
+
+    return (
+        <div id="skillcontainer" className="w-full h-full relative aspect-[5/3] border-red-600 border-2 text-center rounded-lg overflow-hidden cursor-pointer"
             onClick={ handleClick }
             >
                 <div id="image" className="w-full h-full transition-all duration-500 ease-in-out">
@@ -33,13 +34,6 @@ const Project: FC<ProjectProps> = ({ project }) => {
                     <p className="absolute bottom-4 left-0 right-0">{ status }</p>
                 </div>
             </div>
-        );
-    }
-
-    const status = project.complete ? 'Complete! Check it out!' : 'In Progress...';
-
-    return (
-        <MyImage />
     )
 }
 

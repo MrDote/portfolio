@@ -4,8 +4,6 @@ import CustomButton from "./CustomButton";
 import Sidebar from "./Sidebar";
 import paths from '../paths';
 
-// isOut = {isOut}
-// setIsOut = {handleNav}
 export type propsType = {
     isOut: boolean,
     setIsOut: Dispatch<SetStateAction<boolean>>,
@@ -18,13 +16,17 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleShadow = () => {
-            if (window.scrollY >= 1) {
+            // if (window.scrollY >= 1) {
+            if (element.scrollTop >= 1) {
                 setShadow(true);
             } else {
                 setShadow(false);
             }
         };
-        window.addEventListener('scroll', handleShadow);
+
+        const element = document.getElementById("main-wrapper") as HTMLDivElement;
+        element.addEventListener('scroll', handleShadow);
+        // window.addEventListener('scroll', handleShadow);
 
         window.addEventListener('resize', () => {
             if (self.innerWidth > 768) setIsOut(false);
@@ -36,7 +38,7 @@ const Navbar = () => {
         setIsOut: setIsOut,
     }
 
-    // //* custom hook to track window width
+    // //* custom hook to track window width (instead resolved with event listener directly)
     // function useWindowSize() {
     //     const [size, setSize] = useState([0]);
     //     useEffect(() => {
@@ -60,7 +62,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`fixed w-full z-10 h-24 transition-all duration-300
+        <div className={`fixed z-10 h-24 transition-all duration-300 w-[calc(100%-0.9rem)]
         ${shadow ? 'shadow-xl backdrop-blur' : ''}
         `}>
             <ul className={`justify-end w-full h-full px-5 duration-500 gap-7 text-lg uppercase md:px-10 xl:px-12 md:flex pt-8 hidden
