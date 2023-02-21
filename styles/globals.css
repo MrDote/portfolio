@@ -8,6 +8,16 @@
     --primary-text-color: #1d3145;
     --primary-border-color: rgb(244 244 245);
     --form-color-red: #AE1100;
+    --form-color-shaddow: #BABECC;
+    --form-color-white: #FFF;
+}
+
+[data-theme='dark'] {
+    --primary-bg-color: #101735;
+    --secondary-bg-color: rgb(28, 62, 118);
+    --primary-text-color: #ffffff;
+    --primary-border-color: rgb(244 244 245);
+    --form-color-red: #AE1100;
     --form-color-bg: #EBECF0;
     --form-color-shaddow: #BABECC;
     --form-color-white: #FFF;
@@ -16,7 +26,7 @@
 @layer base {
     
     body {
-        @apply bg-[var(--primary-bg-color)]  text-[var(--primary-text-color)]
+        @apply bg-[var(--primary-bg-color)] text-[var(--primary-text-color)]
     }
 
     h1, h2, h3, h4, h5, h6 {

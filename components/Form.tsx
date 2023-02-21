@@ -43,19 +43,19 @@ function Form() {
                 </div>
                 <div className='p-10 relative'>
                     <div className='label py-2'>
-                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg' {...register("fullName", { required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Name"/>
+                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg bg-[var(--form-color-white)]' {...register("fullName", { required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Name"/>
                         <p className="text-red-500">{errors.fullName?.message}</p>
                     </div>
                     <div className='label py-2'>
-                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg' {...register("email", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Email Address"/>
+                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg bg-[var(--form-color-white)]' {...register("email", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Email Address"/>
                         <p className="text-red-500">{errors.email?.message}</p>
                     </div>
                     <div className='label py-2'>
-                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg' {...register("company", {minLength: {value: 3, message: 'Min length is 3.'}})} placeholder="Company (Optional)"/>
+                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg bg-[var(--form-color-white)]' {...register("company", {minLength: {value: 3, message: 'Min length is 3.'}})} placeholder="Company (Optional)"/>
                         <p className="text-red-500">{errors.company?.message}</p>
                     </div>
                     <div className='label py-2'>
-                        <textarea className='w-full input focus:input-focus p-2 min-h-[4rem] rounded-lg' {...register("message", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Your message"></textarea>
+                        <textarea className='w-full input focus:input-focus p-2 min-h-[4rem] rounded-lg bg-[var(--form-color-white)]' {...register("message", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Your message"></textarea>
                         <p className="text-red-500">{errors.message?.message}</p>
                     </div>
                     <button className="absolute bottom-[-1.5rem] right-10 button hover:button-hover active:button-active h-16 w-40" type="submit">Submit</button>

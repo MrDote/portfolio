@@ -7,8 +7,8 @@ import paths from '../paths';
 
 const Footer = () => {
     return (
-        <div className='px-10 pb-3 bg-gradient-to-b from-[var(--form-color-bg)] border-t border-slate-300'>
-            <div className='max-w-4xl m-auto'>
+        <div className='px-10 pb-3 bg-gradient-to-b from-[var(--primary-bg-color)] border-t border-slate-300'>
+            <div className='relative max-w-4xl m-auto'>
                 <ReturnButton />
                 <div className='flex flex-row justify-evenly text-sky-600 my-5 py-5'>
                     <Link href={paths.github} className='cursor-pointer hover:shadow-md shadow-slate-500 shadow-lg scale-110 hover:scale-100 active:scale-100 active:shadow-inner p-2 rounded-full text-black'>

@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import CustomButton from "./CustomButton";
 import Sidebar from "./Sidebar";
 import paths from '../paths';
+import MenuButton from "./MenuButton";
+import DarkThemeButton from "./DarkThemeButton";
 
 export type propsType = {
     isOut: boolean,
@@ -83,7 +84,9 @@ const Navbar = () => {
                 
             <Sidebar {...propPack} />
 
-            <CustomButton {...propPack} />
+            <MenuButton {...propPack} />
+
+            <DarkThemeButton />
 
         </div>
     );
