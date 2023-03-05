@@ -34,7 +34,7 @@ const Navbar = () => {
         });
     }, []);
 
-    const propPack:propsType = {
+    const propPack: propsType = {
         isOut: isOut,
         setIsOut: setIsOut,
     }
@@ -63,8 +63,8 @@ const Navbar = () => {
 
 
     return (
-        <div className={`fixed z-10 h-24 transition-all duration-300 w-[calc(100%-0.9rem)]
-        ${shadow ? 'shadow-xl backdrop-blur' : ''}
+        <div className={`fixed z-10 h-24 transition-shadow duration-300 w-[calc(100%-0.9rem)]
+        ${shadow ? 'shadow-xl backdrop-blur dark:shadow-black/70 dark:shadow-dark-navbar' : ''}
         `}>
             <ul className={`justify-end w-full h-full px-5 duration-500 gap-7 text-lg uppercase md:px-10 xl:px-12 md:flex pt-8 hidden
             `}>

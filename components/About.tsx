@@ -32,7 +32,7 @@ const About = () => {
                     width="80"
                     height="80"
                     alt="Monitor image"
-                    className='foreground-closer absolute bottom-[-3.5%] right-[20%]'
+                    className='foreground-closer absolute bottom-[-3.5%] right-[20%] dark:image-dark'
                 />
             </>
         );

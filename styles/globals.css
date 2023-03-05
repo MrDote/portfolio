@@ -3,30 +3,19 @@
 @tailwind utilities;
 
 :root {
-    --primary-bg-color: #EBECF0;
-    --secondary-bg-color: rgb(209, 214, 222);
-    --primary-text-color: #1d3145;
-    --primary-border-color: rgb(244 244 245);
-    --form-color-red: #AE1100;
-    --form-color-shaddow: #BABECC;
-    --form-color-white: #FFF;
-}
-
-[data-theme='dark'] {
-    --primary-bg-color: #101735;
-    --secondary-bg-color: rgb(28, 62, 118);
-    --primary-text-color: #ffffff;
-    --primary-border-color: rgb(244 244 245);
-    --form-color-red: #AE1100;
-    --form-color-bg: #EBECF0;
-    --form-color-shaddow: #BABECC;
-    --form-color-white: #FFF;
+    --primary-bg-color: theme(colors.bg-light);
+    --secondary-bg-color: theme(colors.bg-light-2);
+    --primary-text-color: theme(colors.text-light);
+    --primary-border-color: theme(colors.border-light);
+    --form-color-red: theme(colors.red.400);
+    --form-color-shadow: theme(colors.shadow-light);
+    --form-color-white: theme(colors.white);
 }
 
 @layer base {
     
     body {
-        @apply bg-[var(--primary-bg-color)] text-[var(--primary-text-color)]
+        @apply bg-bg-light text-text-light dark:bg-bg-dark dark:text-text-dark
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -52,48 +41,51 @@
         text-shadow: 1px 1px 1px var(--form-color-white);
     }
 
+    .segment-no-shadow {
+        text-shadow: none;
+    }
+
     .button .input {
         border: 0;
         outline: 0;
         font-size: 1rem;
         padding: 1rem;
-        background-color: var(--form-color-bg);
-        text-shadow: 1px 1px 0 var(--form-color-white);
+        background-color: var(--primary-bg-color);
     }
 
     .button {
         color:#61677C;
         font-weight: bold;
-        box-shadow: -5px -5px 20px var(--form-color-white),  5px 5px 20px var(--form-color-shaddow);
+        box-shadow: -5px -5px 20px var(--form-color-white),  5px 5px 20px var(--form-color-shadow);
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         font-weight: 600;
     }
 
     .button-hover {
-        box-shadow: -2px -2px 5px var(--form-color-white), 2px 2px 5px var(--form-color-shaddow);
+        box-shadow: -2px -2px 5px var(--form-color-white), 2px 2px 5px var(--form-color-shadow);
     }
 
     .button-active {
-        box-shadow: inset 1px 1px 2px var(--form-color-shaddow), inset -1px -1px 2px var(--form-color-white);
+        box-shadow: inset 1px 1px 2px var(--form-color-shadow), inset -1px -1px 2px var(--form-color-white);
     }
 
     .input {
         margin-right: 0.5rem;
-        box-shadow: inset 2px 2px 5px var(--form-color-shaddow), inset -5px -5px 10px var(--form-color-white);
+        box-shadow: inset 2px 2px 5px var(--form-color-shadow), inset -5px -5px 10px var(--form-color-white);
         width: 100%;
         box-sizing: border-box;
-        transition: all 0.2s ease-in-out;
+        transition: box-shadow 0.2s ease-in-out;
         appearance: none;
     }
 
     .input-focus {
         outline: none;
-        box-shadow: inset 1px 1px 2px var(--form-color-shaddow), inset -1px -1px 2px var(--form-color-white);
+        box-shadow: inset 1px 1px 2px var(--form-color-shadow), inset -1px -1px 2px var(--form-color-white);
     }
 
     .skill {
-        box-shadow: -5px -5px 20px var(--form-color-white), 5px 5px 20px var(--form-color-shaddow);
+        box-shadow: -5px -5px 20px var(--form-color-white), 5px 5px 20px var(--form-color-shadow);
     }
 
     #skillcontainer:hover > #image {
@@ -130,6 +122,10 @@
         transform-style: preserve-3d;
         z-index: -1;
     }
+
+    .image-dark {
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(44deg) brightness(103%) contrast(101%);
+    }
 }
 
 @layer utilities {
@@ -139,13 +135,13 @@
       
     /* Track */
     ::-webkit-scrollbar-track {
-        background: rgb(255 255 255 / 60%);
-        border-radius: 15px;
+        @apply bg-text-dark dark:bg-text-dark;
+        /* border-radius: 15px; */
     }
       
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: var(--form-color-shaddow);
+        @apply bg-shadow-dark dark:bg-text-light;
         border-radius: 15px;
     }
 }

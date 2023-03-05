@@ -4,10 +4,8 @@ type ProjectType = {
     readonly name: string;
     readonly description: string;
     readonly imagesrc: string;
-    readonly bgcolor: string;
     readonly complete: boolean;
     readonly url: URL;
-    readonly id: number;
 }
 
 export interface ProjectProps {
@@ -18,68 +16,82 @@ const Projects = () => {
 
     const projects: ProjectType[] = [
         {
+            name: 'CapsNet for Morphology Evolution Prediction',
+            description: 'Train a capsule based neural network to classify galaxies!',
+            complete: true,
+            url: new URL('https://github.com/MrDote/GalaxyZoo-CapsNet'),
+            imagesrc: "/projects/capsnet.png",
+        },
+
+        {
+            name: 'DeepCaps: Deeper Capsule Networks',
+            description: 'Construct and compare deeper CapsNets on various classification tasks!',
+            complete: true,
+            url: new URL('https://github.com/MrDote/DeepCaps_Pytorch'),
+            imagesrc: "/projects/deepcaps.png",
+        },
+
+        {
             name: 'Self-Driving Car',
-            description: 'Teach car how to drive using CNNs!',
+            description: 'Teach a car how to drive using CNNs!',
             complete: true,
             url: new URL('https://github.com/MrDote/portfolio'),
-            id: 1,
             imagesrc: "/projects/car.png",
-            bgcolor: "#0f172a",
+        },
+        
+        {
+            name: 'Monte Carlo Simulation',
+            description: 'Simulation of particles in a box with Python',
+            complete: true,
+            url: new URL('https://github.com/MrDote/MonteCarloSimulation'),
+            imagesrc: "/projects/montecarlo.png",
         },
         
         {
             name: 'Solar System Simulation',
             description: 'Simulation of the Solar System with Python',
             complete: true,
-            url: new URL('https://github.com/MrDote/Simulation'),
-            id: 2,
-            imagesrc: "/projects/car.png",
-            bgcolor: "rgb(45 135 253)",
-        },
-        
-        {
-            name: 'Basic TODO App',
-            description: 'Connecting frontend with Rust and Postgres on the backend',
-            complete: true,
-            url: new URL('https://github.com/MrDote/portfolio'),
-            id: 3,
-            imagesrc: "/projects/car.png",
-            bgcolor: "rgb(45 135 253)",
-        },
-        
-        {
-            name: 'CV Builder',
-            description: 'Making my own CV template with Astro',
-            complete: false,
-            url: new URL('https://github.com/MrDote/portfolio'),
-            id: 4,
-            imagesrc: "/projects/car.png",
-            bgcolor: "rgb(45 135 253)",
+            url: new URL('https://github.com/MrDote/SolarSystemSimulation'),
+            imagesrc: "/projects/solarsystem.png",
         },
 
         {
+            name: 'TODO App',
+            description: 'Connecting CRA with Rust and PostgreSQL on the backend',
+            complete: true,
+            url: new URL('https://github.com/MrDote/CRA_Rust_PSQL'),
+            imagesrc: "/projects/rust.png",
+        },
+        
+        {
             name: 'CV Builder',
             description: 'Making my own CV template with Astro',
             complete: false,
+            url: new URL('https://github.com/MrDote/CV'),
+            imagesrc: "/projects/cv.png",
+        },
+
+        {
+            name: 'Small JS',
+            description: 'Making my own CV template with Astro',
+            complete: false,
             url: new URL('https://github.com/MrDote/portfolio'),
-            id: 5,
             imagesrc: "/projects/car.png",
-            bgcolor: "rgb(45 135 253)",
         },
     ]
 
     return (
-        <div className='relative p-5 border-t-4 border-[var(--primary-border-color)] bg-gradient-to-b from-[var(--secondary-bg-color)]'>
+        <div className='relative p-5 border-t-4 border-border-light bg-gradient-to-b from-bg-light-2 dark:from-bg-dark-2'>
             <h1 className="uppercase tracking-wide text-center relative
-            after:absolute after:content[''] after:bg-[var(--primary-text-color)] after:w-24 after:h-1 after:-bottom-3 after:left-[49%] after:-ml-10
+            after:absolute after:content[''] after:bg-text-light dark:after:bg-text-dark after:w-24 after:h-1 after:-bottom-3 after:left-[50%] after:-ml-10
             ">Projects</h1>
             <a id='projects' className="absolute top-[-6rem] left-0"></a>
-            <div className="mx-10 grid grid-cols-1 gap-5 my-14 border-black border-2
+            <div className="mx-10 grid grid-cols-1 gap-5 my-14
             sm:grid-cols-2 sm:mx-5
             lg:grid-cols-3 lg:mx-[3%]
             xl:mx-[7%]
             ">
-                {projects.map((lst, _) => <Project project={lst} key={lst.id} />)}
+                {projects.map((project, index) => <Project project={project} key={index} />)}
             </div>
         </div>
     )
