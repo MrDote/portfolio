@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.10.0",
     "@types/email-templates": "^10.0.1",
     "@types/node": "18.11.11",
     "@types/react": "18.0.26",

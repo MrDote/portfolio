@@ -21,22 +21,32 @@ function Form() {
             message: ""
     }});
 
-    const onSubmit = (data: FormValues) => {
-        const postData = async() => {
+    const onSubmit = async (data: FormValues) => {
+
+        // const formData = {};
+
+        try {
             const res = await fetch("/api/formData", {
                 method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
                 body: JSON.stringify(data)
             });
-            return res.json();
-        };
-        postData().then((dt) => {
-            console.log(dt.message)
-        })
-    }
+
+            if (res.ok) {
+                console.log(res);
+            } else {
+                console.error(res);
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
-        <div className='sm:my-8 my-12 text-xl max-w-4xl mx-auto
-        '>
+        <div className='sm:my-8 my-12 text-xl max-w-4xl mx-auto'>
             <form className='font-Montserrat tracking-tight m-5' onSubmit={handleSubmit(onSubmit)}>
                 <div className="segment dark:segment-no-shadow text-center">
                     <p>Let's build something together!</p>
