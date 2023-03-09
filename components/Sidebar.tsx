@@ -13,7 +13,7 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
 
     return (
         <div 
-        className={`transition-all duration-500 ease-in-out fixed right-0 top-0 w-full h-screen md:hidden select-none bg-black/60
+        className={`transition-[opacity,visibility] duration-500 ease-in-out fixed right-0 top-0 w-full h-screen md:hidden select-none bg-black/60
         ${isOut ? `` : `opacity-0 invisible`}
         `}>
             <div className={`fixed right-0 top-0 w-8/12 sm:w-7/12 md:w-5/12 lg:w-1/3 h-screen sm:p-10 px-7 pt-10 transition-[transform,opacity,visibility] ease-in-out duration-500 bg-bg-light dark:bg-bg-dark -mr-[0.9rem]

@@ -11,28 +11,28 @@ const About = () => {
                     width="250"
                     height="250"
                     alt="Monitor image"
-                    className='background absolute bottom-[3%] left-[38%]'
+                    className='background absolute bottom-[-6rem] left-[38%] lg:w-72 xl:w-80 2xl:w-[22rem]'
                 />
                 <Image
                     src="/aboutbg/book-nobg.png"
-                    width="110"
-                    height="110"
+                    width="100"
+                    height="100"
                     alt="Book image"
-                    className='foreground absolute bottom-[-4.2%] right-[-10%]'
+                    className='foreground absolute bottom-[-4.2%] right-[-30%] lg:w-28 xl:w-32 2xl:w-36'
                 />
                 <Image
                     src="/aboutbg/cup-nobg.png"
                     width="80"
                     height="80"
                     alt="Cup image"
-                    className='foreground absolute bottom-[-3.5%]'
+                    className='foreground absolute bottom-[-7rem] lg:w-24 xl:w-24 2xl:w-28'
                 />
                 <Image
                     src="/aboutbg/mouse-nobg.png"
                     width="80"
                     height="80"
-                    alt="Monitor image"
-                    className='foreground-closer absolute bottom-[-3.5%] right-[20%] dark:image-dark'
+                    alt="Mouse image"
+                    className='foreground-closer absolute bottom-[-4rem] right-[20%] dark:image-dark lg:w-24 xl:w-26 2xl:w-28'
                 />
             </>
         );

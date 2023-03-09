@@ -22,7 +22,7 @@ const CustomButton = ({isOut, setIsOut}: propsType) => {
             after:absolute after:w-12 after:h-2 after:bg-bg-light after:rounded-md after:shadow after:shadow-zinc-800 after:transition-all after:duration-500 after:ease-in-out after:translate-y-4
             ${isOut ? `translate-x-[-3rem] bg-transparent shadow-none pointer-events-none
             before:rotate-45 before:translate-x-11 before:translate-y-0 before:w-16 before:bg-slate-800/90 dark:before:bg-bg-light before:shadow-none
-            after:rotate-[-45deg] after:translate-x-11 after:translate-y-0 after:w-16 after:bg-slate-800/90 dark:after:bg-bg-light after:shadow-none ` : ''}
+            after:rotate-[-45deg] after:translate-x-11 after:translate-y-0 after:w-16 after:bg-slate-800/90 dark:after:bg-bg-light after:shadow-none` : ''}
             `}>
             </div>
         </div>

@@ -16,6 +16,14 @@ const Projects = () => {
 
     const projects: ProjectType[] = [
         {
+            name: 'My Portfolio Site',
+            description: 'Made using Typescript, TailwindCSS, Next.js and Supabase',
+            complete: true,
+            url: new URL('https://github.com/MrDote/portfolio'),
+            imagesrc: "/projects/portfolio.png",
+        },
+
+        {
             name: 'CapsNet for Morphology Evolution Prediction',
             description: 'Train a capsule based neural network to classify galaxies!',
             complete: true,
@@ -34,7 +42,7 @@ const Projects = () => {
         {
             name: 'Self-Driving Car',
             description: 'Teach a car how to drive using CNNs!',
-            complete: true,
+            complete: false,
             url: new URL('https://github.com/MrDote/portfolio'),
             imagesrc: "/projects/car.png",
         },
@@ -66,17 +74,25 @@ const Projects = () => {
         {
             name: 'CV Builder',
             description: 'Making my own CV template with Astro',
-            complete: false,
+            complete: true,
             url: new URL('https://github.com/MrDote/CV'),
             imagesrc: "/projects/cv.png",
         },
 
         {
-            name: 'Small JS',
-            description: 'Making my own CV template with Astro',
+            name: 'Beginner PyTorch Networks',
+            description: 'Implementing basic neural networks from scratch!',
             complete: false,
-            url: new URL('https://github.com/MrDote/portfolio'),
-            imagesrc: "/projects/car.png",
+            url: new URL('https://github.com/MrDote/Pytorch_Small_Projects'),
+            imagesrc: "/projects/torchh.png",
+        },
+
+        {
+            name: 'Small JS Projects',
+            description: 'JavaScript animations using canvas',
+            complete: true,
+            url: new URL('https://github.com/MrDote/JSProjects'),
+            imagesrc: "/projects/js.png",
         },
     ]
 
