@@ -43,19 +43,19 @@ function Form() {
                 </div>
                 <div className='sm:p-10 py-10 relative'>
                     <div className='label py-2'>
-                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg dark:shadow-none dark:bg-text-light' {...register("fullName", { required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Name"/>
+                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg dark:shadow-none dark:bg-slate-600' {...register("fullName", { required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Name"/>
                         <p className="text-red-500">{errors.fullName?.message}</p>
                     </div>
                     <div className='label py-2'>
-                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg dark:shadow-none dark:bg-text-light' {...register("email", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Email Address"/>
+                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg dark:shadow-none dark:bg-slate-600' {...register("email", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Email Address"/>
                         <p className="text-red-500">{errors.email?.message}</p>
                     </div>
                     <div className='label py-2'>
-                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg dark:shadow-none dark:bg-text-light' {...register("company", {minLength: {value: 3, message: 'Min length is 3.'}})} placeholder="Company (Optional)"/>
+                        <input className='input px-2 mb-1 focus:input-focus h-8 rounded-lg dark:shadow-none dark:bg-slate-600' {...register("company", {minLength: {value: 3, message: 'Min length is 3.'}})} placeholder="Company (Optional)"/>
                         <p className="text-red-500">{errors.company?.message}</p>
                     </div>
                     <div className='label py-2'>
-                        <textarea className='w-full input focus:input-focus p-2 min-h-[4rem] rounded-lg dark:shadow-none dark:bg-text-light' {...register("message", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Your message"></textarea>
+                        <textarea className='w-full input focus:input-focus p-2 min-h-[4rem] rounded-lg dark:shadow-none dark:bg-slate-600' {...register("message", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Your message"></textarea>
                         <p className="text-red-500">{errors.message?.message}</p>
                     </div>
                     <button className="absolute bottom-[-1.5rem] right-1/2 transform translate-x-1/2 sm:transform-none sm:right-10 button dark:shadow-none dark:bg-slate-700 hover:button-hover active:button-active h-16 w-40 dark:text-text-dark" type="submit">Submit</button>
