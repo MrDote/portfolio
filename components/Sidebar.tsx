@@ -29,7 +29,7 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
                 const fetch = require('node-fetch');
                 const headers = new Headers();
                 const x_api_key = process.env.NEXT_PUBLIC_X_API_KEY as string;
-                // headers.append("X-Api-Key", x_api_key);
+                headers.append("X-Api-Key", x_api_key);
 
                 const response = await fetch(url,
                     {
