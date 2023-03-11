@@ -11,7 +11,7 @@ const About = () => {
                     width="250"
                     height="250"
                     alt="Monitor image"
-                    className='background absolute bottom-[-6rem] left-[38%] lg:w-72 xl:w-80 2xl:w-[22rem]'
+                    className='background absolute bottom-[-7rem] left-[38%] lg:w-72 xl:w-80 2xl:w-[22rem]'
                 />
                 <Image
                     src="/aboutbg/book-nobg.png"

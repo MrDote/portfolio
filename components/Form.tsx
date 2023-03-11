@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 function Form() {
@@ -13,7 +14,7 @@ function Form() {
         message: string,
     }
 
-    const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({
+    const { register, handleSubmit, reset, formState, formState: { errors , isSubmitSuccessful } } = useForm<FormValues>({
         defaultValues: {
             fullName: "",
             email: "",
@@ -22,9 +23,6 @@ function Form() {
     }});
 
     const onSubmit = async (data: FormValues) => {
-
-        // const formData = {};
-
         try {
             const res = await fetch("/api/formData", {
                 method: "POST",
@@ -38,12 +36,21 @@ function Form() {
             if (res.ok) {
                 console.log(res);
             } else {
-                console.error(res);
+                console.error(errors);
             }
-        } catch (error) {
-            console.error(error);
+        } catch (e) {
+            console.error(e);
         }
     };
+
+    useEffect(() => {
+        const submitMessage = document.getElementById('submitMessage');
+        if (formState.isSubmitSuccessful) {
+            reset();
+            submitMessage!.style.visibility = "visible";
+        }
+    }, [formState, reset])
+    
 
     return (
         <div className='sm:my-8 my-12 text-xl max-w-4xl mx-auto'>
@@ -68,6 +75,7 @@ function Form() {
                         <textarea className='w-full input focus:input-focus p-2 min-h-[4rem] rounded-lg dark:shadow-none dark:bg-slate-600' {...register("message", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Your message"></textarea>
                         <p className="text-red-500">{errors.message?.message}</p>
                     </div>
+                    <p id="submitMessage" className="text-center invisible">Form successfully submitted!</p>
                     <button className="absolute bottom-[-1.5rem] right-1/2 transform translate-x-1/2 sm:transform-none sm:right-10 button dark:shadow-none dark:bg-slate-700 hover:button-hover active:button-active h-16 w-40 dark:text-text-dark" type="submit">Submit</button>
                 </div>
             </form>
