@@ -5,11 +5,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === "POST") {
         const body = req.body;
 
-        console.log(body)
+        // console.log(body)
 
         const { data, error } = await supabase.from("messages").upsert(body);
 
-        console.log(error)
+        // console.log(error)
                 
         if (!error) {
             res.status(200).json(data);

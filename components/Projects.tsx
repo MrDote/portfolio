@@ -16,7 +16,7 @@ const Projects = () => {
 
     const projects: ProjectType[] = [
         {
-            name: 'My Portfolio Site',
+            name: 'Portfolio Website',
             description: 'Made using Typescript, TailwindCSS, Next.js and Supabase',
             complete: true,
             url: new URL('https://github.com/MrDote/portfolio'),

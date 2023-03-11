@@ -8,7 +8,7 @@ import { propsType } from './Navbar';
 const Sidebar = ({isOut, setIsOut}: propsType) => {
 
     const handleClick = () => {
-        setIsOut(false);
+        setIsOut(!isOut);
     }
 
     return (
