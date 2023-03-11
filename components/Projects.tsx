@@ -28,7 +28,7 @@ const Projects = () => {
             description: 'Train a capsule based neural network to classify galaxies!',
             complete: true,
             url: new URL('https://github.com/MrDote/GalaxyZoo-CapsNet'),
-            imagesrc: "/projects/capsnet.png",
+            imagesrc: "/projects/capsnet2.png",
         },
 
         {
@@ -43,7 +43,7 @@ const Projects = () => {
             name: 'Self-Driving Car',
             description: 'Teach a car how to drive using CNNs!',
             complete: false,
-            url: new URL('https://github.com/MrDote/portfolio'),
+            url: new URL('https://github.com/MrDote/Car'),
             imagesrc: "/projects/car.png",
         },
         

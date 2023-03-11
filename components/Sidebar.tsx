@@ -3,6 +3,7 @@ import { ImLinkedin2 } from 'react-icons/im';
 import { AiFillGithub, AiFillMediumCircle } from 'react-icons/ai';
 import paths from '../paths';
 import { propsType } from './Navbar';
+import { useEffect, useState } from 'react';
 
 
 const Sidebar = ({isOut, setIsOut}: propsType) => {
@@ -10,6 +11,50 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
     const handleClick = () => {
         setIsOut(!isOut);
     }
+
+    const [quote, setQuote] = useState('');
+
+    useEffect(() => {
+        // const api_url = "https://zenquotes.io/api/quotes/";
+        // const proxy_url = new URL("https://api.allorigins.win/get?" + api_url);
+        
+        const category = 'inspirational';
+        const api_url = new URL('https://api.api-ninjas.com/v1/quotes?category=' + category);
+
+        async function getAPI(url: URL) {
+
+            let fetched_quote;
+
+            try {
+                const fetch = require('node-fetch');
+                const headers = new Headers();
+                const x_api_key = process.env.NEXT_PUBLIC_X_API_KEY as string;
+                // headers.append("X-Api-Key", x_api_key);
+
+                const response = await fetch(url,
+                    {
+                        method: "GET",
+                        headers: headers
+                    }
+                );
+
+                const data = await response.json();
+                const quot = data[0].quote;
+                console.log(quot)
+                fetched_quote = quot;
+
+            } catch (e) {
+                console.error(e)
+                fetched_quote = 'Change your thoughts and you change your world.';
+            } finally {
+                setQuote(fetched_quote);
+            }
+        }
+
+        getAPI(api_url)
+
+    }, [isOut]);
+    
 
     return (
         <div 
@@ -19,10 +64,8 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
             <div className={`fixed right-0 top-0 w-8/12 sm:w-7/12 md:w-5/12 lg:w-1/3 h-screen sm:p-10 px-7 pt-10 transition-[transform,opacity,visibility] ease-in-out duration-500 bg-bg-light dark:bg-bg-dark -mr-[0.9rem]
             ${isOut ? `` : `translate-x-40 opacity-0 invisible`}
             `}>
-                <div className='border-b font-semibold text-lg my-12
-                border-gray-300
-                '>
-                    <p>Some cool quote</p>
+                <div className='border-b border-gray-300 dark:border-gray-600 font-semibold text-lg my-12 py-3'>
+                    <p className='underline'>{quote}</p>
                 </div>
                 <div className='uppercase font-semibold text-lg py-5'>
                     <ul className='flex flex-col gap-y-10'>
