@@ -102,19 +102,31 @@
     }
 
     .background {
-        transform: translateZ(-15px) scale(2.5);
+        top: 50%;  
+        left: 50%; 
+        transform: translate(-50%, -50%) translateZ(-80px) scale(2.3);
     }
 
-    .foreground {
-        transform: translateZ(-10px) scale(2);
+    .foreground-cup {
+        top: 80%;  
+        left: 100%; 
+        transform: translate(-0%, -50%) translateZ(-60px) scale(2);
     }
 
-    .foreground-closer {
-        transform: translateZ(-5px) scale(1.5);
+    .foreground-mouse {
+        top: 90%;  
+        left: 70%; 
+        transform: translate(-20%, -50%) translateZ(-20px) scale(1.4);
+    }
+
+    .foreground-book {
+        top: 80%;  
+        left: 10%; 
+        transform: translate(-90%, -50%) translateZ(-50px) scale(1.9);
     }
 
     #main-wrapper {
-        perspective: 10px;
+        perspective: 100px;
         perspective-origin: center;
     }
 

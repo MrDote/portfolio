@@ -75,7 +75,7 @@ function Form() {
                         <textarea className='w-full input focus:input-focus p-2 min-h-[4rem] rounded-lg dark:shadow-none dark:bg-slate-600' {...register("message", {required: "This is a required field.", minLength: {value: 4, message: 'Min length is 4.'}})} placeholder="Your message"></textarea>
                         <p className="text-red-500">{errors.message?.message}</p>
                     </div>
-                    <p id="submitMessage" className="text-center invisible">Form successfully submitted!</p>
+                    <p id="submitMessage" className="text-center invisible my-2">Form successfully submitted!</p>
                     <button className="absolute bottom-[-1.5rem] right-1/2 transform translate-x-1/2 sm:transform-none sm:right-10 button dark:shadow-none dark:bg-slate-700 hover:button-hover active:button-active h-16 w-40 dark:text-text-dark" type="submit">Submit</button>
                 </div>
             </form>
