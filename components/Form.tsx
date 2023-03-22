@@ -34,12 +34,12 @@ function Form() {
             });
 
             if (res.ok) {
-                console.log(res);
+                // console.log(res);
             } else {
-                console.error(errors);
+                // console.error(errors);
             }
         } catch (e) {
-            console.error(e);
+            // console.error(e);
         }
     };
 
