@@ -15,63 +15,68 @@ const Skills = () => {
     const skills: SkillType[] = [
         {
             name: 'TypeScript',
-            score: 2,
+            score: 9,
             id: 1,
         },
         {
-            name: 'Rust',
-            score: 5,
-            id: 2,
-        },
-        {
-            name: 'Python',
-            score: 3,
-            id: 3,
-        },
-        {
             name: 'Git',
-            score: 5,
+            score: 9,
             id: 4,
         },
         {
-            name: 'MDX',
-            score: 3,
-            id: 5,
+            name: 'Python',
+            score: 8,
+            id: 3,
         },
         {
             name: 'TailwindCSS',
-            score: 5,
+            score: 8,
             id: 6,
         },
         {
             name: 'React',
-            score: 3,
+            score: 7,
+            id: 2,
+        },
+        {
+            name: 'Next',
+            score: 7,
+            id: 9,
+        },
+        {
+            name: 'Rust',
+            score: 7,
             id: 7,
         },
         {
             name: 'Astro',
-            score: 9,
+            score: 7,
             id: 8,
         },
         {
-            name: 'Next',
-            score: 6,
-            id: 9,
-        },
-        {
-            name: 'Prisma',
-            score: 5,
-            id: 10,
-        },
-        {
             name: 'PostgreSQL',
-            score: 8,
+            score: 7,
             id: 11,
         },
         {
+            name: 'Supabase',
+            score: 6,
+            id: 13,
+        },
+        {
             name: 'Vercel',
-            score: 5,
+            score: 6,
             id: 12,
+        },
+        {
+            name: 'Prisma',
+            score: 6,
+            id: 10,
+        },
+        {
+            name: 'MDX',
+            score: 6,
+            id: 14,
         },
     ]
 

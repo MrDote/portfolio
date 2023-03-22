@@ -15,15 +15,12 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
     const [quote, setQuote] = useState('');
 
     useEffect(() => {
-        // const api_url = "https://zenquotes.io/api/quotes/";
-        // const proxy_url = new URL("https://api.allorigins.win/get?" + api_url);
-        
         const category = 'inspirational';
         const api_url = new URL('https://api.api-ninjas.com/v1/quotes?category=' + category);
 
         async function getAPI(url: URL) {
 
-            let fetched_quote;
+            let fetched_quote: string = "Change your thoughts and you change your world.";
 
             try {
                 const fetch = require('node-fetch');
@@ -40,18 +37,20 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
 
                 const data = await response.json();
                 const quot = data[0].quote;
-                console.log(quot)
+                // console.log(quot)
                 fetched_quote = quot;
 
             } catch (e) {
                 console.error(e)
-                fetched_quote = 'Change your thoughts and you change your world.';
             } finally {
+                if (fetched_quote.length > 90) {
+                    getAPI(api_url);
+                }
                 setQuote(fetched_quote);
             }
         }
 
-        getAPI(api_url)
+        getAPI(api_url);
 
     }, [isOut]);
     

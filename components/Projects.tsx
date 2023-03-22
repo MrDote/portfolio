@@ -40,6 +40,14 @@ const Projects = () => {
         },
 
         {
+            name: 'Sorting Visualizer',
+            description: 'A visualization tools for popular sorting algorithms',
+            complete: false,
+            url: new URL('https://github.com/MrDote/Sorting-Visualizer'),
+            imagesrc: "/projects/visualizer.png",
+        },
+
+        {
             name: 'Self-Driving Car',
             description: 'Teach a car how to drive using CNNs!',
             complete: false,
@@ -57,18 +65,10 @@ const Projects = () => {
         
         {
             name: 'Solar System Simulation',
-            description: 'Simulation of the Solar System with Python',
+            description: 'Simulating the Solar System using various numerical methods',
             complete: true,
             url: new URL('https://github.com/MrDote/SolarSystemSimulation'),
             imagesrc: "/projects/solarsystem.png",
-        },
-
-        {
-            name: 'TODO App',
-            description: 'Connecting CRA with Rust and PostgreSQL on the backend',
-            complete: true,
-            url: new URL('https://github.com/MrDote/CRA_Rust_PSQL'),
-            imagesrc: "/projects/rust.png",
         },
         
         {
@@ -77,6 +77,14 @@ const Projects = () => {
             complete: true,
             url: new URL('https://github.com/MrDote/CV'),
             imagesrc: "/projects/cv.png",
+        },
+        
+        {
+            name: 'TODO App',
+            description: 'Connecting CRA with Rust and PostgreSQL on the backend',
+            complete: true,
+            url: new URL('https://github.com/MrDote/CRA_Rust_PSQL'),
+            imagesrc: "/projects/rust.png",
         },
 
         {
@@ -88,12 +96,12 @@ const Projects = () => {
         },
 
         {
-            name: 'Small JS Projects',
+            name: 'Animations with JavaScript',
             description: 'JavaScript animations using canvas',
             complete: true,
             url: new URL('https://github.com/MrDote/JSProjects'),
             imagesrc: "/projects/js.png",
-        },
+        }
     ]
 
     return (
