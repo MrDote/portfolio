@@ -42,10 +42,12 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
                     quote_index += 1;
                 }
 
-                setQuote(data[quote_index].quote);
+                fetched_quote = data[quote_index].quote;
 
             } catch (e) {
                 // console.error(e)
+            } finally {
+                setQuote(fetched_quote);
             }
         }
 
