@@ -16,7 +16,7 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
 
     useEffect(() => {
         const category = 'inspirational';
-        const api_url = new URL('https://api.api-ninjas.com/v1/quotes?category=' + category);
+        const api_url = new URL('https://api.api-ninjas.com/v1/quotes?category=' + category + '&limit=10');
 
         async function getAPI(url: URL) {
 
@@ -36,17 +36,16 @@ const Sidebar = ({isOut, setIsOut}: propsType) => {
                 );
 
                 const data = await response.json();
-                const quot = data[0].quote;
-                // console.log(quot)
-                fetched_quote = quot;
+
+                let quote_index = 0;
+                while (data[quote_index].quote.length > 80) {
+                    quote_index += 1;
+                }
+
+                setQuote(data[quote_index].quote);
 
             } catch (e) {
-                console.error(e)
-            } finally {
-                if (fetched_quote.length > 90) {
-                    getAPI(api_url);
-                }
-                setQuote(fetched_quote);
+                // console.error(e)
             }
         }
 
