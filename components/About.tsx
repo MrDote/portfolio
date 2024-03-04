@@ -44,9 +44,9 @@ const About = () => {
             <div className='max-w-7xl m-auto w-full h-full flex flex-col items-center gap-12'>
                 <CustomTextRoller />
                 <p className='max-w-2xl text-lg font-medium'>
-                    I am a front-end web developer focusing on building excellent software.
-                    Currently, I specialize in building fast, responsive websites and applications while diving into 
-                    back-end technologies and machine learning.
+                    I am a software developer focusing on building excellent applications.
+                    Currently, I specialize in implementing and applying state-of-the-art deep learning models to real-world issues,
+                    while diving into cloud technologies and web development.
                 </p>
             </div>
         </div>

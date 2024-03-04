@@ -1,6 +1,6 @@
-## Anton Portfolio
+## Portfolio
 
-This is my first personal statically rendered portfolio website hosted on Vercel and made using Typescript, TailwindCSS, NextJS, and Supabase.
+This is my first personal, statically rendered portfolio website hosted on Vercel and made using Typescript, TailwindCSS, NextJS, and Supabase.
 
 ### Features
 

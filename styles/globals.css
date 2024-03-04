@@ -4,10 +4,6 @@
 
 :root {
     --primary-bg-color: theme(colors.bg-light);
-    --secondary-bg-color: theme(colors.bg-light-2);
-    --primary-text-color: theme(colors.text-light);
-    --primary-border-color: theme(colors.border-light);
-    --form-color-red: theme(colors.red.400);
     --form-color-shadow: theme(colors.shadow-light);
     --form-color-white: theme(colors.white);
 }
@@ -45,22 +41,22 @@
         text-shadow: none;
     }
 
-    .button .input {
+    /* .input {
         border: 0;
         outline: 0;
-        font-size: 1rem;
+        font-size: rem;
         padding: 1rem;
         background-color: var(--primary-bg-color);
-    }
+    } */
 
-    .button {
+    /* .button {
         color:#61677C;
         font-weight: bold;
         box-shadow: -5px -5px 20px var(--form-color-white),  5px 5px 20px var(--form-color-shadow);
         transition: all 0.2s ease-in-out;
         cursor: pointer;
         font-weight: 600;
-    }
+    } */
 
     .button-hover {
         box-shadow: -2px -2px 5px var(--form-color-white), 2px 2px 5px var(--form-color-shadow);
@@ -71,6 +67,11 @@
     }
 
     .input {
+        border: 0;
+        outline: 0;
+        font-size: rem;
+        padding: 1rem;
+        @apply bg-bg-light;
         margin-right: 0.5rem;
         box-shadow: inset 2px 2px 5px var(--form-color-shadow), inset -5px -5px 10px var(--form-color-white);
         width: 100%;
